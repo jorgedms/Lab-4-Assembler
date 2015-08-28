@@ -1,23 +1,11 @@
 @--------------------------------------------------------
 @Universidad del Valle de Guatemala
-@Prelaboratorio 4 Assembler
-@Autor: Christopher Aju, 13171
 @
-@Archivo que realiza una secuencia de encendido de leds
-@primera secuencia
-@		verde:encendido
-@		amarillo:apagado
-@		rojo:apagado
+@Laboratorio 4 Assembler
 @
-@segunda secuencia
-@		verde:apagado
-@		amarillo:encendido
-@		rojo:apagado
+@Christopher Aju, 13171
 @
-@tercera secuencia
-@		verde:apagado
-@		amarillo:apagado
-@		rojo:encendido
+@Jorge Manrique, 13600
 @--------------------------------------------------------
 
 .section .init
