@@ -2,7 +2,7 @@
 @ Apagado de pines 7, 8, 9, 10, 11 y 14
 .globl Apagado
 Apagado:
-	push{lr}
+	push {lr}
 	mov r0,#7
 	mov r1,#0
 	bl SetGpio
@@ -30,13 +30,13 @@ Apagado:
 	/* Delay de 0.5s */
 	ldr r0,=500000
 	bl Wait
-	pop{pc}
+	pop {pc}
 	
 
 .globl Asignacion
 Asignacion:
 
-	push{lr}
+	push {lr}
 	@@ colocar los puertos del 7 al 11 y 14 como salidas
 
 	@ puerto 7 como salida
@@ -68,12 +68,12 @@ Asignacion:
 	mov r0,#14
 	mov r1,#1
 	bl SetGpioFunction
-	pop{pc}
+	pop {pc}
 
 .globl EncendidoT
 EncendidoT:
 
-	push{lr}
+	push {lr}
 	mov r0,#7
 	mov r1,#1
 	bl SetGpio
@@ -101,4 +101,4 @@ EncendidoT:
 	/* Delay de 0.5s */
 	ldr r0,=500000
 	bl Wait	
-	pop{pc}
+	pop {pc}
