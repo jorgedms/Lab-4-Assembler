@@ -87,17 +87,17 @@ infinito:
 
 	@@			 7 8 9 10 11 14
 	@@ secuencia x x 0 0  x  x
-	Encendido2 9, 10
+	Encendido2 #9, #10
 	bl Apagado
 
 	@@			 7 8 9 10 11 14
 	@@ secuencia x 0 x x  0  x
-	Encendido2 8, 11
+	Encendido2 #8, #11
 	bl Apagado
 
 	@@			 7 8 9 10 11 14
 	@@ secuencia 0 x x x  x  0
-	Encendido2 7, 14
+	Encendido2 #7, #14
 	bl Apagado
 	
 	@@			 7 8 9 10 11 14
