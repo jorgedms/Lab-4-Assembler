@@ -99,12 +99,38 @@ infinito:
 	@@ secuencia 0 x x x  x  0
 	Encendido2 7, 14
 	bl Apagado
-
+	
+	@@			 7 8 9 10 11 14
+	@@			 x 0 x  0  x  0
+	Encendido1 #8
+	Encendido2 #10, #14
+	bl Apagado
 	@				7 8 9 10 11 14
 	@secuencia		0 x 0  x  0  x
 	Encendido1 #7
 	Encendido2 #9, #11
 	bl Apagado
+	
+	@@			 7 8 9 10 11 14
+	@@			 x 0 x  0  x  0
+	Encendido1 #8
+	Encendido2 #10, #14
+	bl Apagado
+	
+	@				7 8 9 10 11 14
+	@secuencia		0 x 0  x  0  x
+	Encendido1 #7
+	Encendido2 #9, #11
+	bl Apagado
+	
+	@encedido todo
+	bl EncendidoT
+	
+	@apagado todo
+	bl Apagado
+	
+	@encedido todo
+	bl EncendidoT
 	
 	@				7 8 9 10 11 14
 	@secuencia		x 0 0  0  0 x
