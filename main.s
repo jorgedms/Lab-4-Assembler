@@ -53,7 +53,7 @@ b main
 	bl SetGpio
 	
 	/*delay*/
-	ldr r0, =1000000
+	ldr r0, =500000
 	bl Wait
 .endm
 
@@ -79,28 +79,38 @@ b main
 main:
 	mov sp, #0x8000
 
-@ loop infinito
+	@ loop infinito
 infinito:
 
-@@ colocar los puertos del 7 al 11 y 14 como salidas
-bl Asignacion
+	@@ colocar los puertos del 7 al 11 y 14 como salidas
+	bl Asignacion
 
-@@			 7 8 9 10 11 14
-@@ secuencia x x 0 0  x  x
+	@@			 7 8 9 10 11 14
+	@@ secuencia x x 0 0  x  x
+	Encendido2 9, 10
+	bl Apagado
 
-Encendido2 9, 10
-bl Apagado
+	@@			 7 8 9 10 11 14
+	@@ secuencia x 0 x x  0  x
+	Encendido2 8, 11
+	bl Apagado
 
-@@			 7 8 9 10 11 14
-@@ secuencia x 0 x x  0  x
+	@@			 7 8 9 10 11 14
+	@@ secuencia 0 x x x  x  0
+	Encendido2 7, 14
+	bl Apagado
 
-Encendido2 8, 11
-bl Apagado
-
-@@			 7 8 9 10 11 14
-@@ secuencia 0 x x x  x  0
-
-Encendido2 7, 14
-bl Apagado
-
+	@				7 8 9 10 11 14
+	@secuencia		0 x 0  x  0  x
+	Encendido1 #7
+	Encendido2 #9, #11
+	bl Apagado
+	
+	@				7 8 9 10 11 14
+	@secuencia		x 0 0  0  0 x
+	Encendido1 #8
+	Encendido1 #9
+	Encendido2 #10, #11
+	bl Apagado
+	
 b infinito
